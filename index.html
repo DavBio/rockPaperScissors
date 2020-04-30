@@ -1,0 +1,86 @@
+<!D0CTYPE html>
+<html>
+<head>
+    <meta charset="UTF8">
+</head>
+<body>
+ 
+    
+
+ <script>
+
+//Escolha do computador
+function computerPlay () {
+
+    let optionsArray = ["Rock", "Paper", "Scissors"];
+     return optionsArray[Math.floor(Math.random()*3)] 
+}
+
+//Função de round
+function round (playerSelection, computerSelection) {
+
+    let win = 0;
+    let lose = 1;
+    let draw = 2;
+
+    computerSelection = computerPlay();
+    playerSelection = "Rock";
+    
+    if (computerSelection === playerSelection) {
+        return draw;
+    } else if (computerSelection === "Rock") {
+
+        if (playerSelection === "Scissors") {
+            return lose;
+        }
+
+        if (playerSelection === "Paper") {
+            return win;
+        }
+    } else if (computerSelection === "Paper") {
+       
+        if (playerSelection === "Rock") {
+            return lose;
+        }
+
+        if (playerSelection === "Scissors") {
+            return win;
+        }
+    } else {
+       
+        if (playerSelection === "Paper") {
+            return lose;
+        }
+
+        if (playerSelection === "Rock") {
+            return win;
+        }
+    }
+
+}
+
+//jogo
+
+function game () {
+
+    let scorePlayer = 0;
+    let scoreComputer = 0;
+    
+    // win "You Win! " + playerSelection + " beats " + computerSelection; player+1
+    // lose "You Lose! " + computerSelection + " beats " + playerSelection; compute+1
+    // draw computerSelection + " and " + playerSelection + " Make a Draw! "; 0
+}
+
+
+
+
+ </script>   
+</body>
+
+
+
+
+
+
+
+</html>
