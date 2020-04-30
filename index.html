@@ -16,46 +16,69 @@ function computerPlay () {
      return optionsArray[Math.floor(Math.random()*3)] 
 }
 
+//vvv
+
+   //vvvvv 
 //Função de round
-function round (playerSelection, computerSelection) {
+function round (computerSelection, playerSelection) {
 
     let win = 0;
     let lose = 1;
     let draw = 2;
+    playerPrompt = prompt("Play","Rock, Paper or Scissors?");
 
-    computerSelection = computerPlay();
-    playerSelection = "Rock";
-    
+        if (playerPrompt === null) {
+        alert("Canceled")}
+
+    playerSelection = playerPrompt.slice(0,1).toUpperCase() + playerPrompt.slice(1).toLowerCase(); 
+
+    if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
+    } else { alert("I'm sorry, i did'nt understand.") }
+
     if (computerSelection === playerSelection) {
+        
+        console.log(computerSelection + " and " + playerSelection + " Make a Draw! Play Again!");
         return draw;
     } else if (computerSelection === "Rock") {
 
         if (playerSelection === "Scissors") {
+            
+            console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
             return lose;
         }
 
         if (playerSelection === "Paper") {
+            
+            console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
             return win;
         }
     } else if (computerSelection === "Paper") {
        
         if (playerSelection === "Rock") {
+            
+            console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
             return lose;
         }
 
         if (playerSelection === "Scissors") {
+            
+            console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
             return win;
         }
-    } else {
+    } else if (computerSelection === "Scissors") {
        
         if (playerSelection === "Paper") {
+           
+            console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
             return lose;
         }
 
         if (playerSelection === "Rock") {
+            
+            console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
             return win;
         }
-    }
+    } 
 
 }
 
@@ -64,11 +87,37 @@ function round (playerSelection, computerSelection) {
 function game () {
 
     let scorePlayer = 0;
-    let scoreComputer = 0;
+        let scoreComputer = 0;  
+
+    for ( i = 0 ; i < 5 ; i++)
+    {
+        
+        
+        
+        let result = round(computerPlay());
+        if (result === 0 ) {
+            console.log("round " + (i+1) + " :");
+
+            scorePlayer+=1;
+            console.log("You: " + scorePlayer + " Computer: " + scoreComputer );
+        } else if (result === 1) {
+            console.log("round " + (i+1) + " :");
+
+            scoreComputer+=1;
+            console.log("You: " + scorePlayer + " Computer: " + scoreComputer );
+        } else {
+            i--;
+        }
+       
+    }
     
-    // win "You Win! " + playerSelection + " beats " + computerSelection; player+1
-    // lose "You Lose! " + computerSelection + " beats " + playerSelection; compute+1
-    // draw computerSelection + " and " + playerSelection + " Make a Draw! "; 0
+    if (scorePlayer < scoreComputer) {
+        console.log("You Loose! Try again!"
+        + " You: " + scorePlayer + " Computer: " + scoreComputer)
+    } else {
+        console.log("Congratulations! You win!"
+        + " You: " + scorePlayer + " Computer: " + scoreComputer)
+    }
 }
 
 
