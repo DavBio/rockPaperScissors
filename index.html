@@ -33,7 +33,7 @@ function round (computerSelection, playerSelection) {
     playerSelection = playerPrompt.slice(0,1).toUpperCase() + playerPrompt.slice(1).toLowerCase(); 
 
     if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
-    } else { alert("I'm sorry, i did'nt understand.") }
+    } else { alert("I'm sorry, i didn't understand.") }
 
     if (computerSelection === playerSelection) {
         
@@ -112,7 +112,7 @@ function game () {
     }
     
     if (scorePlayer < scoreComputer) {
-        console.log("You Loose! Try again!"
+        console.log("You Lose! Try again!"
         + " You: " + scorePlayer + " Computer: " + scoreComputer)
     } else {
         console.log("Congratulations! You win!"
