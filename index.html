@@ -5,131 +5,22 @@
 </head>
 <body>
  
-    
-
- <script>
-
-//Escolha do computador
-function computerPlay () {
-
-    let optionsArray = ["Rock", "Paper", "Scissors"];
-     return optionsArray[Math.floor(Math.random()*3)] 
-}
-
-//vvv
-
-   //vvvvv 
-//Função de round
-function round (computerSelection, playerSelection) {
-
-    let win = 0;
-    let lose = 1;
-    let draw = 2;
-    playerPrompt = prompt("Play","Rock, Paper or Scissors?");
-
-        if (playerPrompt === null) {
-        alert("Canceled")}
-
-    playerSelection = playerPrompt.slice(0,1).toUpperCase() + playerPrompt.slice(1).toLowerCase(); 
-
-    if (playerSelection === "Rock" || playerSelection === "Paper" || playerSelection === "Scissors") {
-    } else { alert("I'm sorry, i didn't understand.") }
-
-    if (computerSelection === playerSelection) {
-        
-        console.log(computerSelection + " and " + playerSelection + " Make a Draw! Play Again!");
-        return draw;
-    } else if (computerSelection === "Rock") {
-
-        if (playerSelection === "Scissors") {
-            
-            console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
-            return lose;
-        }
-
-        if (playerSelection === "Paper") {
-            
-            console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
-            return win;
-        }
-    } else if (computerSelection === "Paper") {
-       
-        if (playerSelection === "Rock") {
-            
-            console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
-            return lose;
-        }
-
-        if (playerSelection === "Scissors") {
-            
-            console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
-            return win;
-        }
-    } else if (computerSelection === "Scissors") {
-       
-        if (playerSelection === "Paper") {
-           
-            console.log("You Lose! " + computerSelection + " beats " + playerSelection + ".");
-            return lose;
-        }
-
-        if (playerSelection === "Rock") {
-            
-            console.log("You Win! " + playerSelection + " beats " + computerSelection + ".");
-            return win;
-        }
-    } 
-
-}
-
-//jogo
-
-function game () {
-
-    let scorePlayer = 0;
-        let scoreComputer = 0;  
-
-    for ( i = 0 ; i < 5 ; i++)
-    {
-        
-        
-        
-        let result = round(computerPlay());
-        if (result === 0 ) {
-            console.log("round " + (i+1) + " :");
-
-            scorePlayer+=1;
-            console.log("You: " + scorePlayer + " Computer: " + scoreComputer );
-        } else if (result === 1) {
-            console.log("round " + (i+1) + " :");
-
-            scoreComputer+=1;
-            console.log("You: " + scorePlayer + " Computer: " + scoreComputer );
-        } else {
-            i--;
-        }
-       
-    }
-    
-    if (scorePlayer < scoreComputer) {
-        console.log("You Lose! Try again!"
-        + " You: " + scorePlayer + " Computer: " + scoreComputer)
-    } else {
-        console.log("Congratulations! You win!"
-        + " You: " + scorePlayer + " Computer: " + scoreComputer)
-    }
-}
-
-
-
-
- </script>   
+<h1>Jo Ken Po!</h1>
+<div class="container"> 
+    <div class="buttonDiv" id="rockDiv"><button class="button" id="rock">ROCK!</button></div>
+    <div class="buttonDiv" id="paperDiv"><button class="button" id="paper">PAPER!</button></div>   
+    <div class="buttonDiv" id="scissorsDiv"><button class="button" id="scissors">SCISSORS!</button></div>
+   
+</div>    
+<div class='resultsDiv'>
+    <div class="round"><p class="results" id="roundResults">Round result:   </p></div>
+    <div class="game"><p>Game results: </p>
+        <br>
+        <p class="results" id="gameResults"></p><br>
+        <p class="results" id="gameResults2"></p>
+    </div>
+</div>
+ <script src="script.js"></script>   
 </body>
-
-
-
-
-
-
 
 </html>
