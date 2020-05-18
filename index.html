@@ -6,20 +6,30 @@
 <body>
  
 <h1>Jo Ken Po!</h1>
+<div class=""></div>
 <div class="container"> 
-    <div class="buttonDiv" id="rockDiv"><button class="button" id="rock">ROCK!</button></div>
-    <div class="buttonDiv" id="paperDiv"><button class="button" id="paper">PAPER!</button></div>   
-    <div class="buttonDiv" id="scissorsDiv"><button class="button" id="scissors">SCISSORS!</button></div>
-   
-</div>    
-<div class='resultsDiv'>
-    <div class="round"><p class="results" id="roundResults">Round result:   </p></div>
-    <div class="game"><p>Game results: </p>
-        <br>
-        <p class="results" id="gameResults"></p><br>
-        <p class="results" id="gameResults2"></p>
+    
+    <div class="player"><p>YOU</p></div>
+    <div class="player playerButtonContainer">
+        <div class="buttonDiv player" id="rockDiv"><button class="button" id="rock">ROCK!</button></div>
+        <div class="buttonDiv player" id="paperDiv"><button class="button" id="paper">PAPER!</button></div>   
+        <div class="buttonDiv player" id="scissorsDiv"><button class="button" id="scissors">SCISSORS!</button></div>
     </div>
-</div>
+    <div class="player"><p id="playerResult"></p></div>
+    <div class="resultContainer">
+        <div><p id="playerScore">0</p></div>
+        <div><p>VS</p></div>
+        <div><p id="computerScore">0</p></div>
+    </div>
+    <div class="computer"><p id="computerResult"></p></div>
+    <div class="computer computerButtonContainer">
+        <div class="buttonDiv computer" id="rockDiv"><button class="button" id="rock">ROCK!</button></div>
+        <div class="buttonDiv computer" id="paperDiv"><button class="button" id="paper">PAPER!</button></div>  
+        <div class="buttonDiv computer" id="scissorsDiv"><button class="button" id="scissors">SCISSORS!</button></div>
+    </div>
+    <div class="computer"><p>COM</p></div>
+</div>    
+<!-- <footer><p>about github</p></footer> <!-->
  <script src="script.js"></script>   
 </body>
 
