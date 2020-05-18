@@ -1,35 +1,48 @@
-<!D0CTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF8">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
- 
-<h1>Jo Ken Po!</h1>
+ <header>
+    <h1>Jo Ken Po!</h1>
+</header>
 <div class="playButton"><button class="playButton">PLAY!</button></div>
-<div class="container"> 
-    
-    <div class="player"><p>YOU</p></div>
-    <div class="player playerButtonContainer">
-        <div class="buttonDiv player" id="rockDiv"><button class="button" id="rock">ROCK!</button></div>
-        <div class="buttonDiv player" id="paperDiv"><button class="button" id="paper">PAPER!</button></div>   
-        <div class="buttonDiv player" id="scissorsDiv"><button class="button" id="scissors">SCISSORS!</button></div>
-    </div>
-    <div class="player"><p id="playerResult"></p></div>
-    <div class="resultContainer">
-        <div><p id="playerScore">0</p></div>
-        <div><p>VS</p></div>
-        <div><p id="computerScore">0</p></div>
-    </div>
-    <div class="computer"><p id="computerResult"></p></div>
-    <div class="computer computerButtonContainer">
-        <div class="buttonDiv computer" id="rockDiv"><button class="button" id="rock">ROCK!</button></div>
-        <div class="buttonDiv computer" id="paperDiv"><button class="button" id="paper">PAPER!</button></div>  
-        <div class="buttonDiv computer" id="scissorsDiv"><button class="button" id="scissors">SCISSORS!</button></div>
-    </div>
-    <div class="computer"><p>COM</p></div>
-</div>    
+    <div class="container"> 
+        
+        <div class="player"><h2>YOU</h2></div>
+        <div class="player playerButtonContainer">
+            <div class="buttonDiv player" id="rockDiv">
+                <button class="button" id="rock"><img class="buttonImages" src="images/rock.png"></button>
+            </div>
+            <div class="buttonDiv player" id="paperDiv">
+                <button class="button" id="paper"><img class="buttonImages" src="images/paper.png"></button>
+            </div>   
+            <div class="buttonDiv player" id="scissorsDiv">
+                <button class="button" id="scissors"><img class="buttonImages" src="images/scissors.png"></button>
+            </div>
+        </div>
+        <div class="player"><p id="playerResult">WIN</p></div>
+        <div class="resultContainer">
+            <div class="playerScore"><p id="playerScore">0</p></div>
+            <div class="vs"><p>VS</p></div>
+            <div class="computerScore"><p id="computerScore">0</p></div>
+        </div>
+        <div class="computer"><p id="computerResult">LOSE</p></div>
+        <div class="computer computerButtonContainer">
+            <div class="buttonDiv computer" id="computerRockDiv">
+                <button class="button" id="rock"><img class="buttonImages" src="images/rock.png"></button>
+            </div>
+            <div class="buttonDiv computer" id="computerPaperDiv">
+                <button class="button" id="paper"><img class="buttonImages" src="images/paper.png"></button>
+            </div>  
+            <div class="buttonDiv computer" id="computerScissorsDiv">
+                <button class="button" id="scissors"><img class="buttonImages" src="images/scissors.png"></button>
+            </div>
+        </div>
+        <div class="computer"><h2>COM</h2></div>
+    </div>    
 <!-- <footer><p>about github</p></footer> <!-->
  <script src="script.js"></script>   
 </body>
