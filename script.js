@@ -12,10 +12,11 @@ const computerRock = document.querySelector('#computerRock');
 const computerPaper = document.querySelector('#computerPaper');
 const computerScissors = document.querySelector('#computerScissors')
 const middleDisplay = document.querySelector('.vs');
-
+const playButton = document.querySelector('.playButton');
+const container = document.querySelector('.container');
+const body = document.querySelector('body');
 const newGameButton = document.createElement('button');
-newGameButton.textContent = "New Game";
-newGameButton.classList.add('playButton');
+
 
 let selectedButton = document.querySelectorAll('.button');
 
@@ -120,14 +121,14 @@ function round (computerSelection, playerSelection) {
         endGameResult.textContent = "YOU WIN!!!";
         playerResult.textContent = "WIN";
         computerResult.textContent = "LOSE";
-        middleDisplay.appendChild(newGameButton);
+        middleDisplay.appendChild(playButton);
         cancelGameButtons();
         
     } else if (scoreComputer === 5) {
         endGameResult.textContent = "COM WINS!!!";
         playerResult.textContent = "LOSE";
         computerResult.textContent = "WIN";
-        middleDisplay.appendChild(newGameButton);
+        middleDisplay.appendChild(playButton);
         cancelGameButtons();
     }
  
@@ -146,20 +147,13 @@ function newGame() {
     playerRock.onclick = () =>  round(computerPlay(),"Rock");
     playerPaper.onclick = () => round(computerPlay(),"Paper");
     playerScissors.onclick = () => round(computerPlay(), "Scissors");
-    middleDisplay.removeChild(newGameButton);
     selectedButton.forEach((el) => el.classList.remove('selectedButton'));
+    playerResult.textContent = "";
+    computerResult.textContent = "";
+    playButton.textContent = "New Game";
+    middleDisplay.removeChild(playButton);
 }
 
-function game () {
-    
-    if (scorePlayer < scoreComputer) {
-        console.log("You Lose! Try again!"
-        + " You: " + scorePlayer + " Computer: " + scoreComputer)
-    } else {
-        console.log("Congratulations! You win!"
-        + " You: " + scorePlayer + " Computer: " + scoreComputer)
-    }
-}
 
 function cancelGameButtons () {
     playerRock.onclick = () =>  null;
@@ -177,4 +171,6 @@ function showSelectedOption (player,computer) {
 playerRock.onclick = () =>  round(computerPlay(),"Rock");
 playerPaper.onclick = () => round(computerPlay(),"Paper");
 playerScissors.onclick = () => round(computerPlay(), "Scissors");
-newGameButton.onclick = () => newGame();
+playButton.onclick = () => newGame();
+cancelGameButtons();
+
