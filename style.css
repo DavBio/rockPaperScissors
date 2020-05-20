@@ -165,7 +165,14 @@ h1 {
     body {
         height:100%;
     }
- 
+    .container {
+        width: 100%;
+        height: 100%;
+        grid-template-rows: 10% 15% 7% 15% 7% 15% 10%;
+    }
+    header{
+        height: 5%;
+    }
     .button {
         width:90%;
         height:100%;
@@ -174,9 +181,9 @@ h1 {
         width: 70%
     }
     .computerScore {
-        font-size:  2.5em;
-    }
+        font-size:  2em;
+          }
     .playerScore {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 }
