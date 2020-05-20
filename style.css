@@ -25,7 +25,7 @@ h1 {
     color: goldenrod;
     display: grid;
     grid-template-rows: 10% 20% 10% 20% 10% 20% 10%;
-    width: 100%;
+    width: 600px;
     border:2px whitesmoke;
     height: 100%;
     border-radius: 20% ;
@@ -157,7 +157,7 @@ h1 {
 #playerScore {
     font-weight: bolder;
 }
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     
     html {
         height: 100%;
@@ -167,27 +167,22 @@ h1 {
     }
     .container {
         height: 90%;
-        grid-template-rows: 10% 20% 10% 7.5% 10% 20% 10%;
-    }
+        grid-template-rows: 10% 12% 10% 10% 10% 12% 10%;
+      }
     .button {
-        width: 100px;
-        height: 100px;
+        width: auto;
+        height: auto;
     } 
     .buttonImages {
         width: 100%;
     }
-    .computerScore {
-        margin:5px auto auto auto;   
+    .resultContainer {
+        font-size: 50px;
     }
-    .playerScore {
-        margin: auto auto 5px auto;
+    .player {
+        font-size: 3em;
     }
-    .vs {
-        height:50%;
-    }
-}
-@media (min-width: 600px) {
-    .container {
-        width: 600px;
+    .computer {
+        font-size: 3em;
     }
 }
