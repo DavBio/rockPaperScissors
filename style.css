@@ -157,7 +157,7 @@ h1 {
 #playerScore {
     font-weight: bolder;
 }
-@media (min-width: 500px) {
+@media (max-width: 500px) {
     
     html {
         height: 100%;
